@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta id="viewport" name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    
+   <script>
+    window.onload = window.onresize = function(){		 
+        var view_width = document.getElementsByTagName('html')[0].getBoundingClientRect().width;
+		//找到标签名为html的第一个
+        var _html = document.getElementsByTagName('html')[0];
+		//如果屏幕宽度大于640 
+		//就用 640/16=40
+		//小于640的时候 不确定 也是尺寸/40
+        view_width>640?_html.style.fontSize = 640 / 16 + 'px':_html.style.fontSize = view_width / 16 + 'px';
+		//最大网页尺寸640 
+		//最大字体（根字体大小） 40
+    }
+</script>
+</head>
+<body>
+	<header>
+		<div class="bananer">
+			<img src="img/bananer.png" alt="">
+		</div>
+		<div class="header_top">
+			<div class="hd_tp fl">
+				<p class="iconfont ff" >&#xe60d;</p>
+				<p>分类</p>
+				<p class="iconfont sousuo fr">&#xe78d;</p>
+			</div>
+			<div class="bd">
+				<from>
+					<input type="text" placeholder="输入搜索关键词">
+				</from>
+			</div>
+			<div class="hd_tp_rg ">
+				<p class="iconfont gw fr">&#xf0179;</p>
+			</div>
+		</div>
+	</header>
+		<div class="center">
+			<ul class="nav fl">
+				<li><img src="img/xiyao.png" alt=""><p>中西医</p></li>
+				<li><img src="img/ertong.png" alt=""><p>儿童用药</p></li>
+				<li><img src="img/pifu.png" alt=""><p>皮肤用药</p></li>
+				<li><img src="img/yiliao.png" alt=""><p>医疗机械</p></li>
+				<li><img src="img/yangsheng.png" alt=""><p>养生保健</p></li>
+				<li><img src="img/yinxing.png" alt=""><p>隐形眼镜</p></li>
+				<li><img src="img/meirong.png" alt=""><p>美容护肤</p></li>
+				<li><img src="img/chengren.png" alt=""><p>成人用品</p></li>
+			</ul>
+			<div class="center_zuidi">
+				<div class="quanwang">
+					<span></span><p>全网最低价</p>
+				</div>
+				<div class="lp fl">
+					<div class="tu1 fl">
+						<img src="img/lpp.png" alt="">
+					</div>
+					<div class="tu fl">
+						<img src="img/maka.png" alt="" class="maka">
+						<img src="img/jiaonang.png" alt="" class="jn">
+					</div>
+				</div>
+				<img src="img/hzl.png" alt="" class="hzl">
+			</div>
+			<div class="center_zuidi" style="margin-top: 2rem;">
+				<div class="quanwang">
+					<span></span><p>答谢恩师</p>
+				</div>
+				<div class="lp fl">
+					<div class="tu fl">
+						<img src="img/heng.png" alt="" class="maka">
+						<img src="img/wang.png" alt="" class="jn">
+					</div>
+					<div class="tu1 fl">
+						<img src="img/hong.png" alt="">
+					</div>
+				</div>
+				<img src="img/fuli.png" alt="" class="hzl">
+			</div>
+			<div class="center_zuidi" style="margin-top: 2rem;">
+				<div class="quanwang">
+					<span></span><p>美美哒</p>
+				</div>
+				<div class="lp fl">
+					<div class="tu1 fl">
+						<img src="img/zi.png" alt="">
+					</div>
+					<div class="tu fl">
+						<img src="img/xin.png" alt="" class="maka">
+						<img src="img/da.png" alt="" class="jn">
+					</div>
+					<img src="img/biao.png" alt="" class="biao">
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<ul class="footer_f1 fl">
+				<li>登录<span>|</span></li>
+				<li>注册</li>
+				<li class="fanhui fr">回首页</li>
+			</ul>
+			<div class="footer_bt ">
+				<ul class="footer_bt_f2 fl">
+					<li>触屏版<span>|</span></li>
+					<li>电脑版<span>|</span></li>
+					<li>App版</li>
+				</ul>
+				<div class="yaodian fl">
+					<ul class="footer_bt_f3 fl">
+						<li><img src="img/zheng.png" alt="">正规药店</li>
+						<li><img src="img/fapiao.png" alt="">提供发票</li>
+						<li><img src="img/qi.png" alt="">7天退换</li>
+					</ul>
+				</div>
+				<ul class="footer_bt_f4 fl">
+					<li>咨询电话：400—7579—818</li>
+				</ul>
+			</div>
+		</div>
+</body>
+</html>
