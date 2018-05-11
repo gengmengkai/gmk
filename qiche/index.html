@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>汽车之友</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+$(function() {
+  var sWidth = $("#focus").width(); //获取焦点图的宽度（显示面积）
+  var len = $("#focus ul li").length; //获取焦点图个数
+  var index = 0;
+  var picTimer;
+  
+  //以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮
+  var btn = "<div class='btnBg'></div><div class='btn'>";
+  for(var i=0; i < len; i++) {
+	  btn += "<span></span>";
+  }
+  btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
+  $("#focus").append(btn);
+  $("#focus .btnBg").css("opacity",0.5);
+
+  //为小按钮添加鼠标滑入事件，以显示相应的内容
+  $("#focus .btn span").css("opacity",0.4).mouseover(function() {
+	  index = $("#focus .btn span").index(this);
+	  showPics(index);
+  }).eq(0).trigger("mouseover");
+
+  //上一页、下一页按钮透明度处理
+  $("#focus .preNext").css("opacity",0.2).hover(function() {
+	  $(this).stop(true,false).animate({"opacity":"0.5"},300);
+  },function() {
+	  $(this).stop(true,false).animate({"opacity":"0.2"},300);
+  });
+
+  //上一页按钮
+  $("#focus .pre").click(function() {
+	  index -= 1;
+	  if(index == -1) {index = len - 1;}
+	  showPics(index);
+  });
+
+  //下一页按钮
+  $("#focus .next").click(function() {
+	  index += 1;
+	  if(index == len) {index = 0;}
+	  showPics(index);
+  });
+
+  //图片为左右滚动，即所有li元素都是在同一排向左浮动，所以这里需要计算出外围ul元素的宽度
+  $("#focus ul").css("width",sWidth * (len));
+  
+  //鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
+  $("#focus").hover(function() {
+	  clearInterval(picTimer);
+  },function() {
+	  picTimer = setInterval(function() {
+		  showPics(index);
+		  index++;
+		  if(index == len) {index = 0;}
+	　　  },4000); //此4000代表自动播放的间隔，单位：毫秒
+  }).trigger("mouseleave");
+  
+  //显示图片函数，根据接收的index值显示相应的内容
+  function showPics(index) { //普通切换
+	var nowLeft = -index*sWidth; //根据index值计算ul元素的left值
+	//使用animate()方法调整ul元素滚动到计算出的position
+	$("#focus ul").stop(true,false).animate({"left":nowLeft},300); 
+	//为当前的按钮切换到选中的效果
+	$("#focus .btn span").stop(true,false).animate({"opacity":"0.4"},300)
+	　.eq(index).stop(true,false).animate({"opacity":"1"},300); 
+  }
+});
+</script>
+<script type="text/javascript">
+$(function() {
+  var sWidth = $("#focuss").width(); //获取焦点图的宽度（显示面积）
+  var len = $("#focuss ul li").length; //获取焦点图个数
+  var index = 0;
+  var picTimer;
+  
+  //以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮
+  var btn = "<div class='btnBg'></div><div class='btn'>";
+  for(var i=0; i < len; i++) {
+	  btn += "<span></span>";
+  }
+  btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
+  $("#focuss").append(btn);
+  $("#focuss .btnBg").css("opacity",0.5);
+
+  //为小按钮添加鼠标滑入事件，以显示相应的内容
+  $("#focuss .btn span").css("opacity",0.4).mouseover(function() {
+	  index = $("#focuss .btn span").index(this);
+	  showPics(index);
+  }).eq(0).trigger("mouseover");
+
+  //上一页、下一页按钮透明度处理
+  $("#focuss .preNext").css("opacity",0.2).hover(function() {
+	  $(this).stop(true,false).animate({"opacity":"0.5"},300);
+  },function() {
+	  $(this).stop(true,false).animate({"opacity":"0.2"},300);
+  });
+
+  //上一页按钮
+  $("#focuss .pre").click(function() {
+	  index -= 1;
+	  if(index == -1) {index = len - 1;}
+	  showPics(index);
+  });
+
+  //下一页按钮
+  $("#focuss .next").click(function() {
+	  index += 1;
+	  if(index == len) {index = 0;}
+	  showPics(index);
+  });
+
+  //图片为左右滚动，即所有li元素都是在同一排向左浮动，所以这里需要计算出外围ul元素的宽度
+  $("#focuss ul").css("width",sWidth * (len));
+  
+  //鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
+  $("#focuss").hover(function() {
+	  clearInterval(picTimer);
+  },function() {
+	  picTimer = setInterval(function() {
+		  showPics(index);
+		  index++;
+		  if(index == len) {index = 0;}
+	　　  },4000); //此4000代表自动播放的间隔，单位：毫秒
+  }).trigger("mouseleave");
+  
+  //显示图片函数，根据接收的index值显示相应的内容
+  function showPics(index) { //普通切换
+	var nowLeft = -index*sWidth; //根据index值计算ul元素的left值
+	//使用animate()方法调整ul元素滚动到计算出的position
+	$("#focuss ul").stop(true,false).animate({"left":nowLeft},300); 
+	//为当前的按钮切换到选中的效果
+	$("#focuss .btn span").stop(true,false).animate({"opacity":"0.4"},300)
+	　.eq(index).stop(true,false).animate({"opacity":"1"},300); 
+  }
+});
+</script>
+</head>
+<body>
+	<div class="header">
+		<div class="header_tp  gWidth">
+			<ul class="header_lf fr">
+				<li><a href="#">汽车经销商大全</a></li>
+				<li><a href="#">北京车展</a></li>
+				<li><a href="#">全国行情</a></li>
+				<li><a href="#">成都分站</a></li>
+				<li class="cd"><a href="#">网上车贷</a></li>
+				<li class="dl"><a href="#">登录</a></li>
+				<li><span>|</span></li>
+				<li><a href="#">注册</a></li>
+				<li class="sc"><a href="#">[收藏本站]</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="header_center gWidth">
+		<div class="logo fl">
+			<img src="img/logo.png" alt>
+		</div>
+		<div class="hd_rg fl">
+			<ul class="nav fl">
+				<li>
+					<a href="#" class="hei">新车</a>
+					<a href="#">国产</a>
+					<a href="#">进口</a>
+					<a href="#">谍照</a>
+				</li>
+				<li>
+					<a href="#" class="hei">资讯</a>
+					<a href="#">行业</a>
+					<a href="#">车企动态</a>
+					<a href="#">原创</a>
+				</li>
+				<li>
+					<a href="#" class="hei">评测</a>
+					<a href="#">专业评测</a>
+					<a href="#">对比测试</a>
+					<a href="#">深度解析</a>
+				</li>
+				<li>
+					<a href="#" class="hei">导购</a>
+					<a href="#" class="hei">行情</a>
+				</li>
+				<li>
+					<a href="#" class="hei">电子杂志</a>
+					<a href="#">评刊</a>
+				</li>
+			</ul>
+			<ul class="nav2">
+				<li><a href="#">图库</a><span>|</span></li>
+				<li><a href="#">问答</a><span>|</span></li>
+				<li><a href="#">体验</a><span>|</span></li>
+				<li><a href="#">汽车赛事</a><span>|</span></li>
+				<li><a href="#">汽车改装</a><span>|</span></li>
+				<li><a href="#">自驾游</a><span>|</span></li>
+				<li><a href="#">汽车技术</a><span>|</span></li>
+				<li><a href="#">汽车设计</a><span>|</span></li>
+				<li><a href="#">用车养车</a><span>|</span></li>
+				<li><a href="#">二手车</a><span>|</span></li>
+				<li><a href="#">《调查》</a><span>|</span></li>
+				<li><a href="#">《问答》</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="header_bt gWidth">
+		<div class="header_bt_active fl"> 
+			<ul class="active fl">
+				<li>快速找车</li>
+				<li><img src="img/sanjiao.png" alt=""></li>
+				<li><input type="text" placeholder="请输入关键字" class="qs"></li>
+				<li><input type="button" value="查找" class="cz"></li>
+				<li class="xian">|</li>
+			</ul>
+			<ul class="active2 fl">
+				<li>品牌找车</li>
+				<li><img src="img/sanjiao.png" alt=""></li>
+				<li><input type="text" placeholder="选择品牌" class="qs"><span><img src="img/daosj.png" alt=""></span></li>
+				<li><input type="text" placeholder="选择车系" class="cx"><span class="hh"><img src="img/daosj.png" alt=""></span></li>
+				<li><input type="button" value="查找" class="cz"></li>
+				<li class="xian">|</li>
+			</ul>
+			<ul class="active3 fl">
+				<li>车型库<span><img src="img/sanjiao.png" alt=""></span></li>
+				<li>按品牌<span>|</span></li>
+				<li>按价格<span>|</span></li>
+				<li>按级别<span>|</span></li>
+				<li>按拼音</li>
+			</ul>
+		</div>
+	</div>
+	<div class="bananer gWidth">
+		<!-- <div class="bananer_tp">
+			<img src="img/bananer.png" alt="">
+			<div class="pp fl">
+				<p class="fl"><img src="img/hot.png" alt=""><span>FSC</span><span>焦点推荐</span></p>
+				<div class="dian fr">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div> -->
+		<div class="wrapper">
+			  <div id="focus">
+			    <ul>
+			      <li><a href="" target="_blank"><img src="img/bananer.png" alt=""></a></li>
+			      <li><a href="" target="_blank"><img src="img/bananer.png" alt=""></a></li>
+			      <li><a href="" target="_blank"><img src="img/bananer.png" alt=""></a></li>
+			      <li><a href="" target="_blank"><img src="img/bananer.png" alt=""></a></li>
+			      <li><a href="" target="_blank"><img src="img/bananer.png" alt=""></a></li>
+			      <li><a href="" target="_blank"><img src="img/bananer.png" alt=""></a></li>
+			      <li><a href="" target="_blank"><img src="img/bananer.png" alt=""></a></li>
+			    </ul>
+			  </div>
+			  <p class="ff"><img src="img/hot.png" alt=""><span>FSC</span><span>焦点推荐</span></p>
+		</div>
+		<!-- <div class="bananer_bt">
+			<ul class="bananer_bt_ac">
+				<li><img src="img/bananer1.png" alt="">
+					<div class="lj">
+						<p class="span">
+						<span class="xing">★</span>
+						<span class="xing">★</span>
+						<span class="xing">★</span>
+						<span class="xing">★</span>
+						<span>★</span>
+						<span>3次评分</span></p>
+						<p class="yd">立即阅读</p>
+					</div>
+				</li>
+				<li class="suv"><img src="img/bananer3.png" alt=""><p><span>纳智捷大7 SUV正式上市，共推出07/08/008亮排量五款车型</span></p></li>
+				<li><img src="img/bananer2.png" alt="">
+					<div class="ljj">
+						<p class="p">东本思铭/途观</p>
+						<p class="a">环保目录再次给我们</p>
+					</div>
+				</li>
+			</ul>
+		</div> -->
+		<ul class="imgs">
+		<li class="img" style="background-image: url(img/bananer3.png);"><div class="shadow"><span class="xing">★★★★<i>★</i></span><span>3次评分</span><p class="yd">立即阅读</p></div></li>
+		<li class="img" style="background-image: url(img/bananer3.png);"><div class="shadow" style="line-height: 64px; padding-left: 26px;">纳智捷大7 SUV正式上市，共推出07/08/008亮排量五款车型</div></li>
+		<li class="img" style="background-image: url(img/bananer3.png);"><div class="shadow"><p class="p">东本思铭/途观</p>
+						<p class="a">环保目录再次给我们环保目录再次给我们</p></div></li>
+		</ul>
+		<script>
+			// 完全展开图片宽度590 其余被挤压图片宽度155
+			$('.img').hover(function() {
+				$(this).width(660).siblings().width(150);
+				// $(this).find('.shadow').hide();
+			}, function() {
+				$('.img').width(320);
+				// $('.shadow').show();
+			});
+		</script>
+	</div>
+	<div class="center gWidth">
+		<div class="jc">精彩聚集</div>
+		<!-- <ul class="nav3">
+			<li><img src="img/ct.png" alt=""></li>
+			<li><img src="img/ad.png" alt=""></li>
+			<li><img src="img/is.png" alt=""></li>
+			<li><img src="img/kr.png" alt=""></li>
+		</ul> -->
+		<div class="jt">
+		    	<img src="img/zjt.png" alt="">
+		    	<img src="img/yjt.png" alt="">
+		    </div>
+		<div class="wrapperr">
+		  <div id="focuss">
+		    <ul>
+		      <li>
+			      <a href="" target="_blank"><img src="img/ct.png" alt="" /></a>
+			      <a href="" target="_blank"><img src="img/ad.png" alt="" /></a>
+			      <a href="" target="_blank"><img src="img/is.png" alt="" /></a>
+			      <a href="" target="_blank"><img src="img/kr.png" alt="" /></a>
+		  	  </li>
+		  	   <li>
+			      <a href="" target="_blank"><img src="img/ct.png" alt="" /></a>
+			      <a href="" target="_blank"><img src="img/ad.png" alt="" /></a>
+			      <a href="" target="_blank"><img src="img/is.png" alt="" /></a>
+			      <a href="" target="_blank"><img src="img/kr.png" alt="" /></a>
+		  	  </li>
+		    </ul>
+		  </div>
+		</div>
+	</div>
+	<div class="content gWidth">
+		<div class="content_tp">
+			<div class="ct_tp">
+				<div class="gy fl"><span>01</span></div>
+				<div class="hb fl"><span>北京工业大学 > BISD车队</span></div>
+				<div class="zs fr"><p>目前总成绩: <span>960</span> 分</p></div>
+			</div>
+			<div class="ct_bt">
+				<div class="ct_bt_lf fl">
+					<img src="img/t1.png" alt="">
+					<p class="fr">官方微博 <span>|</span> 更多动态</p>
+				</div>
+				<div class="ct_bt_ct fl">
+					<table width="380" height="150" border="1" >
+						<tr >
+							<th width="66" height="27">静态项目</th>
+							<td width="66" height="27">营销报告</td>
+							<td width="42" height="27" class="aa">75</td>
+							<td width="66" height="27">赛车设计</td>
+							<td width="42" height="27" class="aa">150</td>
+							<td width="66" height="27">成本分析</td>
+							<td width="42" height="27" class="aa">100</td>
+						</tr>
+						<tr>
+							<th width="66" height="27">动态项目</th>
+							<td width="105" height="27">直线加速测试</td>
+							<td width="38" height="27" class="aa">75</td>
+							<td colspan="2">8字环绕测试</td>
+							<td width="38" height="27" class="aa">50</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th width="66" height="27" rowspan="2"></th>
+							<td width="105" height="27">高速避障测试</td>
+							<td width="38" height="27" class="aa">75</td>
+							<td colspan="2">耐久测试</td>
+							<td width="38" height="27" class="aa">300</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td width="105" height="27">燃油经济性测试</td>
+							<td width="38" height="27" class="aa">100</td>
+							<td colspan="5"></td>
+							
+						</tr>
+						<tr>
+							<th width="66" height="27">总分</th>
+							<td colspan="6" class="kk">960</td>
+						</tr>
+					</table>
+				</div>
+				<div class="ct_bt_rt fl">
+					<p>指导老师：<span>李顺虎</span></p>
+					<p>指导老师：<span>李顺虎</span></p>
+					<p class="fl">指导老师：</p><span class="ls fl">李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎</span>
+				</div>
+			</div>
+		</div>
+		<div class="content_tp" style="margin-top: 5px;">
+			<div class="ct_tp">
+				<div class="gy fl"><span>34</span></div>
+				<div class="hb fl"><span>西安科技汽车职业技术学院 > BISD车队</span></div>
+				<div class="zs fr"><p>目前总成绩: <span>960</span> 分</p></div>
+			</div>
+			<div class="ct_bt">
+				<div class="ct_bt_lf fl">
+					<img src="img/t1.png" alt="">
+					<p class="fr">官方微博 <span>|</span> 更多动态</p>
+				</div>
+				<div class="ct_bt_ct fl">
+					<table width="380" height="150" border="1" >
+						<tr >
+							<th width="66" height="27">静态项目</th>
+							<td width="66" height="27">营销报告</td>
+							<td width="42" height="27" class="aa">75</td>
+							<td width="66" height="27">赛车设计</td>
+							<td width="42" height="27" class="aa">150</td>
+							<td width="66" height="27">成本分析</td>
+							<td width="42" height="27" class="aa">100</td>
+						</tr>
+						<tr>
+							<th width="66" height="27">动态项目</th>
+							<td width="105" height="27">直线加速测试</td>
+							<td width="38" height="27" class="aa">75</td>
+							<td colspan="2">8字环绕测试</td>
+							<td width="38" height="27" class="aa">50</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th width="66" height="27" rowspan="2"></th>
+							<td width="105" height="27">高速避障测试</td>
+							<td width="38" height="27" class="aa">75</td>
+							<td colspan="2">耐久测试</td>
+							<td width="38" height="27" class="aa">300</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td width="105" height="27">燃油经济性测试</td>
+							<td width="38" height="27" class="aa">100</td>
+							<td colspan="5"></td>
+							
+						</tr>
+						<tr>
+							<th width="66" height="27">总分</th>
+							<td colspan="6" class="kk">960</td>
+						</tr>
+					</table>
+				</div>
+				<div class="ct_bt_rt fl">
+					<p>指导老师：<span>李顺虎</span></p>
+					<p>指导老师：<span>李顺虎</span></p>
+					<p class="fl">指导老师：</p><span class="ls fl">李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎</span>
+				</div>
+			</div>
+		</div>
+		<div class="content_tp" style="margin-top: 5px;">
+			<div class="ct_tp">
+				<div class="gy fl"><span>E1</span></div>
+				<div class="hb fl"><span>The Notice of 2012 FSC Recommended Logistics Agent </span></div>
+				<div class="zs fr"><p>目前总成绩: <span>960</span> 分</p></div>
+			</div>
+			<div class="ct_bt">
+				<div class="ct_bt_lf fl">
+					<img src="img/t1.png" alt="">
+					<p class="fr">官方微博 <span>|</span> 更多动态</p>
+				</div>
+				<div class="ct_bt_ct fl">
+					<table width="380" height="150" border="1" >
+						<tr >
+							<th width="66" height="27">静态项目</th>
+							<td width="66" height="27">营销报告</td>
+							<td width="42" height="27" class="aa">75</td>
+							<td width="66" height="27">赛车设计</td>
+							<td width="42" height="27" class="aa">150</td>
+							<td width="66" height="27">成本分析</td>
+							<td width="42" height="27" class="aa">100</td>
+						</tr>
+						<tr>
+							<th width="66" height="27">动态项目</th>
+							<td width="105" height="27">直线加速测试</td>
+							<td width="38" height="27" class="aa">75</td>
+							<td colspan="2">8字环绕测试</td>
+							<td width="38" height="27" class="aa">50</td>
+							<td></td>
+						</tr>
+						<tr>
+							<th width="66" height="27" rowspan="2"></th>
+							<td width="105" height="27">高速避障测试</td>
+							<td width="38" height="27" class="aa">75</td>
+							<td colspan="2">耐久测试</td>
+							<td width="38" height="27" class="aa">300</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td width="105" height="27">燃油经济性测试</td>
+							<td width="38" height="27" class="aa">100</td>
+							<td colspan="5"></td>
+							
+						</tr>
+						<tr>
+							<th width="66" height="27">总分</th>
+							<td colspan="6" class="kk">960</td>
+						</tr>
+					</table>
+				</div>
+				<div class="ct_bt_rt fl">
+					<p>指导老师：<span>李顺虎</span></p>
+					<p>指导老师：<span>李顺虎</span></p>
+					<p class="fl">指导老师：</p><span class="ls fl">李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎 李顺虎</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="gd gWidth">
+		<p class="tj fl"><i>FSC赛事图集</i></p>
+		<p class="gengduo fr"><a href="">更多>></a></p>
+	</div>
+	<div class="tp gWidth">
+		<div class="tp_top">
+			<ul class="nava">
+				<li><img src="img/a1.png" alt=""></li>
+				<li><img src="img/a2.png" alt=""></li>
+				<li><img src="img/a3.png" alt=""></li>
+				<li><img src="img/a4.png" alt=""></li>
+				<li><img src="img/a5.png" alt=""></li>
+				<li><img src="img/a1.png" alt=""></li>
+				<li><img src="img/a2.png" alt=""></li>
+				<li><img src="img/a3.png" alt=""></li>
+				<li><img src="img/a4.png" alt=""></li>
+				<li><img src="img/a5.png" alt=""></li>
+			</ul>
+		</div>
+		<div class="tp_botton">
+			<ul class="navaa">
+				<li><img src="img/s1.png" alt=""><p>天使魔鬼极致诱惑</p></li>
+				<li><img src="img/s2.png" alt=""><p>美女车模出席红车表演</p></li>
+				<li><img src="img/s3.png" alt=""><p>夜色女郎相遇豪华跑车</p></li>
+				<li><img src="img/s4.png" alt=""><p>清纯小妹共舞奥迪</p></li>
+				<li><img src="img/s5.png" alt=""><p>美女车模性感蜕变</p></li>
+			</ul>
+		</div>
+	</div>
+	<div class="main gWidth">
+		<div class="bj">编辑推荐文章</div>
+		<div class="er">
+			<div class="main_tp fl">
+				<div class="tu fl"><img src="img/d1.png" alt=""></div>
+				<div class="text fl">
+					<h5>完全满足日常需求！试驾新福克斯</h5>
+					<p>新福克斯从2012年4月上市至今3个月依赖，始终占据汽车之友紧凑型车以及全国国产车关注度第一的位置，可见这车现在有多热！在今年3月，我们也对新福克斯车型进行了详细测试。并对他的表现给予了很高的评价.<span>[详情]</span></p>
+				</div>
+			</div>
+			<div class="main_tp fl">
+				<div class="tu fl"><img src="img/d2.png" alt=""></div>
+				<div class="text fl">
+					<h5>完全满足日常需求！试驾新福克斯</h5>
+					<p>新福克斯从2012年4月上市至今3个月依赖，始终占据汽车之友紧凑型车以及全国国产车关注度第一的位置，可见这车现在有多热！在今年3月，我们也对新福克斯车型进行了详细测试。并对他的表现给予了很高的评价.<span>[详情]</span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer gWidth">
+		<div class="footer_tp">
+			<ul class="subnav">
+				<li><a href="">关于我们</a><span>|</span></li>
+				<li><a href="">AutoFan动态</a><span>|</span></li>
+				<li><a href="">主编社区</a><span>|</span></li>
+				<li><a href="">联系我们</a><span>|</span></li>
+				<li><a href="">网站地图</a><span>|</span></li>
+				<li><a href="">招贤纳士</a><span>|</span></li>
+				<li><a href="">友情链接</a><span>|</span></li>
+				<li><a href="">百度新闻源</a></li>
+			</ul>
+		</div>
+		<div class="footer_bt">
+				<p class="fl">Copyright(c)2004 - 2012 AutoFan.com.cn,All Rights Reserved 版权所有 汽车之友 京ICP证040935号-1</p>
+				<img src="img/hui.png" alt="" class="fl">
+		</div>
+	</div>
+</body>
+</html>
