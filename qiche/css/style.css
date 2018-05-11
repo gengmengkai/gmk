@@ -400,7 +400,7 @@
 	color:#fff;
 	padding-left: 15px;
 }*/
-.imgs{
+/*.imgs{
 			
 	width: 960px;
 	height: 440px;
@@ -462,7 +462,62 @@
 	color:#fff;
 	padding-left: 22px;
 	padding-top: 6px;
-}
+}*/
+.lunbo {
+    width: 960px;
+    height: 441px;
+    position: relative;
+    overflow: hidden;
+  }
+  .lunbo .imgs {
+    height: 441px; /*图片高度*/
+    width: 3305px; /*所有图片所占总宽度*/
+    position: absolute;
+  }
+  .lunbo .imgs li{
+    float:left;
+  }
+  .lunbo .img {
+    float: left;
+    height: 441px; /*图片高度*/
+    width: 661px; /*默认每幅图片显示宽度*/
+    background-position: center;
+    cursor: pointer;
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+  }
+  .lunbo .shadow {
+    position: absolute;
+    font-size:10px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+    line-height:15%;
+    box-sizing: border-box;
+    padding: 20px;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    text-align:center;
+  }
+  .lunbo .shadow i{color:orange;}
+  .lunbo .shadow p{font-size:10px;margin-top:-10px;}
+  .lunbo .shadow span{display:inline-block;width:104px;height:26px;background:orange;color:white;line-height:26px;text-align:center;font-size:12px;}
+  .lunbo .pre,.nex {
+    position: absolute;
+    top: 197px;
+    border:26px solid transparent;
+    
+  }
+ .lunbo .pre {
+    left:91px;
+    border-color:transparent #91918F transparent transparent;
+  }
+  .lunbo .nex {
+    right:91px;
+    border-color:transparent transparent transparent #91918F;
+  }
 .center{
 	height: 238px;
 	background:url(../img/beijing.png) no-repeat;

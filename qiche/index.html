@@ -288,7 +288,7 @@ $(function() {
 				</li>
 			</ul>
 		</div> -->
-		<ul class="imgs">
+		<!-- <ul class="imgs">
 		<li class="img" style="background-image: url(img/bananer3.png);"><div class="shadow"><span class="xing">★★★★<i>★</i></span><span>3次评分</span><p class="yd">立即阅读</p></div></li>
 		<li class="img" style="background-image: url(img/bananer3.png);"><div class="shadow" style="line-height: 64px; padding-left: 26px;">纳智捷大7 SUV正式上市，共推出07/08/008亮排量五款车型</div></li>
 		<li class="img" style="background-image: url(img/bananer3.png);"><div class="shadow"><p class="p">东本思铭/途观</p>
@@ -303,7 +303,57 @@ $(function() {
 				$('.img').width(320);
 				// $('.shadow').show();
 			});
-		</script>
+		</script> -->
+		<div class="lunbo">
+  <ul class="imgs" style="left:-1174px">
+    <li class="img" style="background-image:('img/bananer3.png')">
+      <div class="shadow">
+        <p><i>☆☆☆☆☆</i>3次评分</p>
+        <span>立即阅读</span>
+      </div>
+      </li>
+    <li class="img act" style="background-image:url('img/bananer3.png')"><div class="shadow" style="line-height: 12px; font-size: 20px;">纳智捷大7 SUV正式上市，共推出07/08/008亮排量五款车型</div></li>
+    <li class="img" style="background-image:url('img/bananer3.png')"><div class="shadow">
+     <!--  <h4 style="line-height:14px;margin-top:-10px;">东北名品</h4> -->
+      <p style="line-height:14px; font-size: 20px;">纳智捷大7 SUV正式上市，共推出07/08/008亮排量五款车型</p>
+    </div></li>
+    <li class="img act" style="background-image:url('img/bananer3.png')"><div class="shadow" style="line-height: 12px;font-size: 20px;">纳智捷大7 SUV正式上市，共推出07/08/008亮排量五款车型</div></li>
+    <li class="img" style="background-image:url('img/bananer3.png')"><div class="shadow">
+     <!--  <h4 style="line-height:14px;margin-top:-10px;">东北名品</h4> -->
+      <p style="line-height:14px; font-size: 20px;">纳智捷大7 SUV正式上市，共推出07/08/008亮排量五款车型</p>
+    </div></li>
+  </ul>
+    <a href="###" class="pre"></a>
+    <a href="###" class="nex"></a>
+</div>
+  <script>
+  var index=0;
+  var speed=200;
+  var w=$('.lunbo .imgs .img').width();
+  var n=$('.imgs').find('li').size();
+  // $('.imgs').width(w*n).css('left','-'+w+'px');
+  function move(direction) {
+    direction=='+'?index--:index++;
+    $('.imgs').animate({
+      left: direction+'='+661+'px'},
+      speed, function() {
+      if($('.imgs').css('left')=='-1173px'){
+        $('.imgs').css('left','-512px');
+        // index=0;
+      }
+      if($('.imgs').css('left')=='0px'){
+        $('.imgs').css('left','-1834px');
+        // index=n-3;
+      }
+    });
+  }
+  $('.pre').click(function() {
+    move('+');
+  });
+  $('.nex').click(function() {
+    move('-');
+  });
+  </script>
 	</div>
 	<div class="center gWidth">
 		<div class="jc">精彩聚集</div>
