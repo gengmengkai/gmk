@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>连衣裙</title>
+	<meta id="viewport" name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="css/lyq.css">
+    <link rel="stylesheet" href="fontt/iconfont.css">
+    
+   <script>
+    window.onload = window.onresize = function(){		 
+        var view_width = document.getElementsByTagName('html')[0].getBoundingClientRect().width;
+		//找到标签名为html的第一个
+        var _html = document.getElementsByTagName('html')[0];
+		//如果屏幕宽度大于640 
+		//就用 640/16=40
+		//小于640的时候 不确定 也是尺寸/40
+        view_width>640?_html.style.fontSize = 640 / 16 + 'px':_html.style.fontSize = view_width / 16 + 'px';
+		//最大网页尺寸640 
+		//最大字体（根字体大小） 40
+    }
+</script>
+</head>
+<body>
+	<header>
+		<div class="header_top">
+			<span class="iconfont fl">&#xe78a;</span>
+			<p class="nvshi fl">Woman, Dresses</p>
+			<span class="iconfont fr gwc">&#xe6af;<i>3</i></span>
+		</div>
+		<div class="header_bottom">
+			<div class="bt1 fl">ADD TO WISHLIST</div>
+			<div class="bt2 fr">ADD TO CART</div>
+		</div>
+	</header>
+	<div class="bananer">
+		<img src="images/bananer.png" alt="">
+		<p class="text"><span class="fl">Elegant Pink Dresses</span><a href="" class="fr qian">$605,00</a></p>
+	</div>
+	<div class="center">
+		<span>Description</span>
+	</div>
+	<div class="active">
+		<div class="color">
+			<h5>Color:</h5>
+			<p>Choose a color for item</p>
+			<ul class="nav fl">
+				<li><img src="images/dui.png" alt=""></li>
+				<li class="f1"></li>
+				<li class="f2"></li>
+			</ul>
+		</div>
+		<div class="xian">
+			<span></span>
+		</div>
+		<div class="size">
+			<h5>Size:</h5>
+			<p>Size available for this item</p>
+			<ul class="nav2 fl">
+				<li>6</li>
+				<li class="ba">8</li>
+				<li>10</li>
+				<li>12</li>
+				<li>14</li>
+			</ul>
+		</div>
+	</div>
+	<div class="anniu">
+		<div class="bt3">ADD TO CART</div>
+	</div>
+	<div class="sh">SHARE ON<span></span></div>
+	<ul class="footer">
+		<li><img src="images/fei.png" alt=""><img src="images/a1.png" alt="" class="a"></li>
+		<li><img src="images/ff.png" alt=""><img src="images/a2.png" alt="" class="a"></li>
+		<li><img src="images/g.png" alt=""><img src="images/a3.png" alt="" class="a"></li>
+	</ul>
+	<div class="botttom"></div>
+</body>
+</html>
