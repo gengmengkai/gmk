@@ -1,0 +1,355 @@
+@charset "utf-8";
+/* CSS Document */
+
+.header{
+			
+			height: 60px;
+			background-color: #303030;
+		}
+		.header .inner_c{
+			
+		}
+		.header .inner_c h1{			
+			float: left;
+		}
+		.header .inner_c .nav{		
+		
+			padding-left:77px;
+		
+		}
+		.header .inner_c .nav li{
+			float: left;
+			width: 100px;
+			height: 60px;
+			border-left: 1px solid #000000;
+			text-align: center;
+			line-height: 60px;
+		}
+		
+		.header .inner_c .nav li a{
+			display: block;
+			height: 60px;
+			text-decoration: none;
+			color:#B4B4B4;
+			font-size: 16px;
+			font-family:"宋体";
+	        font-weight:bold;
+		}
+.nav_right{
+	float:right;
+	height:60px;
+	}
+.nav_right img{
+	margin-top:15px;
+	}
+.nav_right .denglv{
+	font-size:12px;
+	font-family:"宋体";
+	color:#FFF;
+	height:28px;
+	line-height:28px;
+	text-align:center;
+	width:76px;
+	height:28px;
+	line-height:28px;
+	background-color:#F00;
+	display:inline-block;
+	margin-top:15px;
+	margin-left:10px;
+	}
+.nav_right .zhuce{
+	font-size:12px;
+	font-family:"宋体";
+	color:#666666;
+	height:28px;
+	line-height:28px;
+	text-align:center;
+	width:66px;
+	height:28px;
+	line-height:28px;
+	background-color:#F8F8F8;
+	display:inline-block;
+	margin-top:15px;
+	margin-left:10px;
+	}
+.nav_right .wangzhan{
+	background:url(../images/fang.jpg) no-repeat left center;
+	padding-left:24px;
+	margin-left:7px;
+	text-align:center;
+	display:inline-block;
+	color:#666666;
+	font-size:12px;
+	font-family:"宋体";
+	
+	}
+.fangzi{
+	float:right;
+	margin-left:15px;
+	background-color:#F8F8F8;
+	height:28px;
+	width:122px;margin-top:15px;
+	}
+.center{
+	background:url(../images/beijing.jpg) no-repeat left center;
+	margin-top:40px;
+	position:relative;
+	}
+.center .center_left{
+	padding-top:46px;
+	padding-left:48px;
+	}
+.center .center_left h1{
+	width:330px;
+	height:87px;
+	font-weight:bold;
+	font-size:32px;
+	font-family:"Arial";
+	color:#FFF;
+	}
+	.center .center_left h1 span{
+		font-size:36px;
+		font-family:"华文仿宋";
+		font-weight:normal;
+		}
+.center .center_left h1 .ww{
+	font-size:24px;
+	font-family:"Arial";
+	font-weight:inherit;
+	}
+.center .center_right{
+	float:right;
+	position:absolute;
+	right:230px;
+	bottom:5px;
+	}
+	.center .center_right .pp{
+		font-size:22px;
+		font-weight:bold;
+		color:#FFDE00;
+		line-height:38px;
+		}
+.huodong{
+	border-bottom:1px dashed #CCCCCC;
+	;margin-top:59px;
+	position:relative;
+	}
+.huodong h2{
+	font-size:30px;
+	font-family:"宋体";
+	font-weight:bold;
+	position:absolute;
+	left:50%;
+	margin-left:-72px;
+	bottom:-22px;
+	width:144px;
+	height:45px;
+	background-color:#fff;
+	}
+.content{
+	margin-top:40px;
+	}
+.content .content_top li{
+	width:387px;
+	height:320px;
+	float:left;
+	border-bottom:3px solid #999;
+	
+	}
+.content .content_top li h5{
+	font-size:20px;
+	font-family:"微软雅黑";
+	float:left;
+	height:80px;
+	line-height:80px;
+	}
+.content .content_top li .nn{
+	font-size:36px;
+	color:#CBCBCB;
+	float:right;
+	font-weight:bold;
+	
+	}
+.content .content_top li .nn .shijian{
+	font-size:24px;
+	color:#CBCBCB;
+	}
+.content_bottom{
+	margin-top:43px;
+	height: 100px;
+	}
+
+.content_bottom h1{
+	font-size:30px;
+	font-family:"宋体";
+	font-weight:bold;
+	float:left;
+	}
+.content_bottom h1 span{
+	color:#BD0000;
+	}
+.content_bottom ul{
+		height:35px;
+		line-height:35px;
+		padding-left:10px;
+		}
+.content_bottom ul li a{
+	float:left;
+	padding-left:48px;
+	color:#656565;
+	font-size:12px;
+	font-family:"微软雅黑";
+	}
+.column{
+	margin-top:44px;
+	}
+.column .nr .jingcai{
+	width:285px;
+	height:398px;
+	border-top:4px solid #BD0000;
+	}
+.column .nr .jingcai h4{
+	height:36px;
+	line-height:36px;
+	font-size:16px;
+	color:#BD0000;
+	}
+.column .nr .bm{
+	width:283px;
+	height:192px;
+	border:1px solid #CCC;
+	color:#666666;
+	}
+.column .nr .bm h3{
+	font-size:16px;
+	height:49px;
+	line-height:49px;
+	padding-left:19px;
+	}
+.column .nr .bm .p1{
+	padding-left:19px;
+	}
+.column .nr .bm .p1 .sh{
+	background:url(../images/t3.jpg)no-repeat left center;
+	padding-left:13px;}
+.column .nr .bm .p1 .es{
+	background:url(../images/t4.jpg)no-repeat left center;
+	padding-left:15px;
+	}
+.column .nr .bm .p1 .sw{
+	background:url(../images/t5.jpg)no-repeat left center;
+	padding-left:14px;
+	}
+.column .nr .bm img{
+	padding-left:19px;
+	}
+	.column .nr .bm .ss{
+	background:url(../images/t6.jpg)no-repeat left;
+	margin-left:20px;
+	padding-left:42px;
+	width:205px;
+	height:54px;
+	line-height:20px;
+	}
+
+.column .nr .bm .ss h6{
+	font-size:14px;
+	color:#333333;
+	}
+.column .nr .bm .ss span{
+		font-size:12px;
+		font-family:"微软雅黑";
+		color:#999999;
+		
+	}
+.column .nr .top{
+	position:relative;
+	}
+.column .nr .wzz{
+	font-size:12px;
+	color:#fff;
+	background:black;
+	background:rgba(0,0,0,.5);
+	width:275px;
+	height:41px;
+	line-height:20px;
+	position:absolute;
+	bottom:0px;
+	padding-top:9px;
+	}
+.column .nr .wzz .wz1{
+	float:left;
+	padding-left:18px;
+	}
+.column .nr .wzz .wz2{
+	float:right;
+	padding-right:59px;
+	}
+.gengduo{
+	position:relative;
+	margin-top:1200px;
+	}
+.gengduo .gd{
+	font-size:18px;
+	font-family:"微软雅黑";
+	width:360px;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	color:#E9E9E9;
+	background-color:#BD0000;
+	position:absolute;
+	left:50%;
+	margin-left:-180px;
+	}
+.footer{
+	background-color:#303030;
+	height:333px;
+	margin-top:190px;
+	
+	}
+.footer .footer_top{
+	margin-left:100px;
+	border-bottom:2px solid #fff;
+	width:1200px;
+	height:170px;
+	}
+.footer .footer_top li{
+	float:left;
+	margin-right:147px;
+	margin-top:47px;
+	}
+.footer .footer_top .jj{
+	background:url(../images/a3.jpg)no-repeat left;
+	color:#BD0000;
+	padding-left:61px;
+	padding-top:7px;}
+.footer .footer_top .jj h1{
+	font-size:24px;
+	}
+.footer .footer_top h4{
+	font-size:16px;
+	color:#FFF;
+	}
+.footer .footer_top p{
+	font-size:14px;
+	color:#FFF;
+	background:url(../images/a5.jpg)no-repeat left;
+	padding-left:10px;
+	margin-left:9px;
+	line-height:24px;
+}
+.footer_bottom{
+	margin-top:18px;
+	margin-left:100px;
+	}
+.footer_bottom .bq{
+	width:388px;
+	height:33px;
+	display:inline-block;
+	font-size:12px;
+	font-family:"宋体";
+	color:#FFF;
+	margin-left:14px;
+	line-height:14px;
+	}
