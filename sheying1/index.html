@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>摄影</title>
+	<meta id="viewport" name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/shouji.css">
+	<link rel="stylesheet" type="text/css" href="css/pc.css" media="(min-width:1024px">
+	<link rel="stylesheet" href="font/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="swiper/swiper.css">
+</head>
+<body>
+	<div class="header gWidth">	
+		<img src="../摄影/img/logo.jpg" alt="">
+		<i class="iconfont fr sj_hide pc_show">&#xe611;</i>
+		<ul class="nav sj_hide pc_show">
+			<li>首页</li>
+			<li>摄影</li>
+			<li>新闻</li>
+			<li>写真</li>
+			<li>关于</li>
+		</ul>
+	</div>
+	<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../摄影/img/banner.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="../摄影/img/banner.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="../摄影/img/banner.jpg" alt=""></div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+    
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    
+    <!-- 如果需要滚动条 
+    <div class="swiper-scrollbar"></div>
+</div>
+-->
+	
+<script src="swiper/swiper.min.js"></script>
+
+<script>        
+  var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'horizontal',
+    loop: true,
+	effect : 'cube',
+   cubeEffect: {
+    slideShadows: true,
+    shadow: true,
+    shadowOffset: 100,
+    shadowScale: 0.6
+  },
+	
+    autoplay: {
+    delay: 2000,
+    stopOnLastSlide: false,
+    disableOnInteraction: false,
+    },
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+    // 如果需要滚动条
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  })        
+  </script>
+	<div class="about gWidth">
+		<div class="guanyu">
+			<p>关于我们</p>
+			<p class="as">ABOUT AS</p>
+		</div>
+		<div class="nr">摄影师使用某种专门设备进行影像记录的过程，一般我们使用机械照相机或者数码照相机进行摄影。有时摄影也被称为照相，也就是通过物摄影师使用某种专门设备进行影像记录的过程，一般我们使用机械照相机或者数码照相机进行摄影，有时摄影也会被称为照相，也就是通过物</div>
+		<div class="gy">
+			<img src="../摄影/img/gy.jpg" alt="">
+		</div>
+	</div>
+	<div class="qianwang">
+		<img src="../摄影/img/qianwang-.png" alt="">
+	</div>
+	<div class="sheying">
+		<div class="ss gWidth">
+			<div class="photo">
+				<p>摄影类型</p>
+				<p class="ph">Photography by genre</p>
+			</div>
+			<ul class="nr">
+				<li><img src="../摄影/img/gerenxiezhen.png" alt=""><p>个人写真照</p><p>Personal photo</p></li>
+				<li><img src="../摄影/img/guimixiezhen.png" alt=""><p>闺蜜写真照</p><p>Bestie portrait</p></li>
+				<li><img src="../摄影/img/qinzihao.png" alt=""><p>亲子写真照</p><p>Photo portrait</p></li>
+				<li><img src="../摄影/img/hunshazhao.png" alt=""><p>婚纱照</p><p>Wedding photo</p></li>
+			</ul>
+		</div>
+	</div>
+	<div class="fengge gWidth">
+		<div class="fg">
+			<p>风格·写真</p>
+			<p class="st">Style photography</p>
+		</div>
+		<ul class="xz">
+			<li><img src="../摄影/img/m31.jpg" alt=""><p>天生文艺范<img src="../摄影/img/hua.png" alt="" class="hua"></i></p><p class="active">我们抬头仰望，时间向外流淌，我们象那朵云...</p></li>
+			<li><img src="../摄影/img/m32.jpg" alt=""><p>天生就性感<img src="../摄影/img/hua.png" alt="" class="hua"></i></p><p class="active">一个人最好的样子就是平静一点，哪怕一个...</p></li>
+			<li><img src="../摄影/img/m33.jpg" alt=""><p>时尚达人<img src="../摄影/img/hua.png" alt="" class="hua"></i></p><p class="active">有人说孤独是可耻的，而时尚则是抵抗孤...</p></li>
+			<li><img src="../摄影/img/m34.jpg" alt=""><p>青春<img src="../摄影/img/hua.png" alt="" class="hua"></i></p><p class="active">灿烂地犹如初生太阳的面纱，灵袖地犹如崖...</p></li>
+			<li><img src="../摄影/img/m35.jpg" alt=""><p>古典<img src="../摄影/img/hua.png" alt="" class="hua"></i></p><p class="active">长街长，烟花繁，你挑灯回看，短亭短，红尘辗...</p></li>
+			<li><img src="../摄影/img/m36.jpg" alt=""><p>安静<img src="../摄影/img/hua.png" alt="" class="hua"></i></p><p class="active">一个人最好的样子就是平静一点，哪怕一个...</p></li>
+		</ul>
+	</div>
+	<div class="news">
+		<div class="nws gWidth">
+			<div class="xinwen">
+				<p>最新新闻</p>
+				<p class="ns">NEWS</p>
+			</div>
+			<div class="new"> 
+				<div class="xw fl">
+					<img src="../摄影/img/m41.jpg" alt="" class="m">
+					<p>摄影师使用某种专门设备进行影像记录的过程，一般我们使用机械照相机或者数码照相机进行摄影。有时摄影也被称为照相，也就是通过物摄影师使用某种专门设备进行影像记录的过程。有人说过的一句辟的语言：摄影家的能力是把日常生活中稍纵即逝的平凡事物化为不朽的视觉图像。</p>
+					<p>2017-02-03</p>
+					<div class="qianwang">
+						<img src="../摄影/img/qianwang-.png" alt="">
+					</div>
+				</div>
+				<div class="xw">
+					<img src="../摄影/img/m41.jpg" alt="" class="f">
+					<p>摄影师使用某种专门设备进行影像记录的过程，一般我们使用机械照相机或者数码照相机进行摄影。有时摄影也被称为照相，也就是通过物摄影师使用某种专门设备进行影像记录的过程。有人说过的一句辟的语言：摄影家的能力是把日常生活中稍纵即逝的平凡事物化为不朽的视觉图像。</p>
+					<p>2017-02-03</p>
+					<div class="qianwang">
+						<img src="../摄影/img/qianwang-.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="kehu">
+		<div class="kk gWidth">
+			<div class="fk">
+				<p>客户反馈</p>
+				<p class="cf">Customer Feedback</p>
+			</div>
+			<ul class="center">
+				<li><img src="../摄影/img/m5.png" alt=""><p>今天拿错精修了...原片已经很好感觉也是难为修片师了[笑cry][笑cry]再次表扬小午照的棒棒的，造型666，修片自然不做作...</p><p>2017-02-03</p></li>
+				<li><img src="../摄影/img/m5.png" alt=""><p>今天拿错精修了...原片已经很好感觉也是难为修片师了[笑cry][笑cry]再次表扬小午照的棒棒的，造型666，修片自然不做作...</p><p>2017-02-03</p></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="nr gWidth">
+			<p>Copyright 2016 All Rights Reserved 版权所有 某某公司名称</p>
+			<p>宏盟网络科技有限公司技术支持</p>
+			<p>入云端|商务端|祥云端|网游端</p>
+			<p>中国云CHCI系统|ICP备案号：京ICP备09066050号-3</p>
+		</div>
+	</div>
+</body>
+</html>
