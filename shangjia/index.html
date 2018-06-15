@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>优惠卡消费记录</title>
+	<meta id="viewport" name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="css/style_common.css">
+	<link rel="stylesheet" type="text/css" href="css/style_xf.css">
+	<script>
+	    window.onload = window.onresize = function(){		 
+	        var view_width = document.getElementsByTagName('html')[0].getBoundingClientRect().width;
+			//找到标签名为html的第一个
+	        var _html = document.getElementsByTagName('html')[0];
+			//如果屏幕宽度大于640 
+			//就用 640/16=40
+			//小于640的时候 不确定 也是尺寸/40
+	        view_width>640?_html.style.fontSize = 640 / 16 + 'px':_html.style.fontSize = view_width / 16 + 'px';
+			//最大网页尺寸640 
+			//最大字体（根字体大小） 40
+	    }
+	</script>
+</head>
+<body>
+	<header>
+		<div class="hd_top fl">
+			<img src="img/touxiang.png" alt="">
+		</div>
+		<h4>某某店铺</h4>
+	</header>
+	<div class="center">
+		<div class="ct_lf fl">
+			<img src="img/caihua.png" alt="">
+		</div>
+		<p>优惠卡购买记录</p>
+	</div>
+	<table border="1">
+		<tr>
+			<th class="km">卡名称</th>
+			<th class="sl">数量</th>
+			<th class="zf">支付状态</th>
+			<th class="xq">详情</th>
+		</tr>
+		<tr class="top">
+			<td class="km">小潼学饰品店</td>
+			<td class="sl">5</td>
+			<td class="zf"><a href="#">未支付<p>去支付<span></span></p></a></td>
+			<td class="xq"><a href="yhxq.html">点击查看<span></span></a></td>
+		</tr>
+		<tr class="top">
+			<td class="km">小潼学饰品店</td>
+			<td class="sl">55</td>
+			<td class="zf"><a href="#">已支付</a></td>
+			<td class="xq"><a href="yhxq.html">点击查看<span></span></a></td>
+		</tr>
+		<tr class="top">
+			<td class="km">小潼学饰品店</td>
+			<td class="sl">15</td>
+			<td class="zf"><a href="#">未支付<p>去支付<span></span></p></a></td>
+			<td class="xq"><a href="yhxq.html">点击查看<span></span></a></td>
+		</tr>
+		<tr class="top">
+			<td class="km">小潼学饰品店</td>
+			<td class="sl">55</td>
+			<td class="zf"><a href="#">已支付</a></td>
+			<td class="xq"><a href="yhxq.html">点击查看<span></span></a></td>
+		</tr>
+	</table>
+	<div class="footer">
+		<a href="" class="sy">首页</ a>
+		<a href="" class="top">上一页</ a>
+		<a href="" class="one">1</ a>
+		<a href="" class="two">2</ a>
+		<a href="" class="bottom">下一页</ a>
+		<a href="">末页</ a>
+	</div>
+</body>
+</html>

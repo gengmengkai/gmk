@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>优惠卡详情</title>
+	<meta id="viewport" name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="css/style_common.css">
+	<link rel="stylesheet" type="text/css" href="css/style_xfxq.css">
+	<script>
+	    window.onload = window.onresize = function(){		 
+	        var view_width = document.getElementsByTagName('html')[0].getBoundingClientRect().width;
+			//找到标签名为html的第一个
+	        var _html = document.getElementsByTagName('html')[0];
+			//如果屏幕宽度大于640 
+			//就用 640/16=40
+			//小于640的时候 不确定 也是尺寸/40
+	        view_width>640?_html.style.fontSize = 640 / 16 + 'px':_html.style.fontSize = view_width / 16 + 'px';
+			//最大网页尺寸640 
+			//最大字体（根字体大小） 40
+	    }
+	</script>
+</head>
+<body>
+	<header>
+		<div class="hd_top fl">
+			<img src="img/touxiang.png" alt="">
+		</div>
+		<h4>某某店铺</h4>
+	</header>
+	<div class="center">
+		<div class="ct_lf fl">
+			<img src="img/caihua.png" alt="">
+		</div>
+		<p>优惠卡购买记录--详情页面</p>
+	</div>
+	<table border="1">
+		<tr>
+			<th>订单号</td>
+			<td>715284179358129</td>
+		</tr>
+		<tr>
+			<th>卡名称</td>
+			<td>小潼学饰品店</td>
+		</tr>
+		<tr>
+			<th>数量</td>
+			<td>20</td>
+		</tr>
+		<tr>
+			<th>时间</td>
+			<td>2018-06-07 15</td>
+		</tr>
+		<tr>
+			<th>支付状态</td>
+			<td>已支付</td>
+		</tr>
+	</table>
+</body>
+</html>
